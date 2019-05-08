@@ -1,0 +1,53 @@
+{
+  "name": "vscode-typescript-pnp-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "displayName": "TypeScript Plug’n’Play",
+  "description": "Plug’n’Play support for Visual Studio Code",
+  "repository": "https://github.com/ark120202/vscode-typescript-pnp-plugin",
+  "license": "Apache-2.0",
+  "publisher": "ark120202",
+  "icon": "docs/icon.png",
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "typescript",
+    "yarn",
+    "plugnplay",
+    "pnp"
+  ],
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "main": "index.js",
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
+  ],
+  "contributes": {
+    "typescriptServerPlugins": [
+      {
+        "name": "typescript-pnp-plugin",
+        "enableForWorkspaceTypeScriptVersions": true
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "prettier --check **/*.{js,md,yml}"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "proseWrap": "always",
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "dependencies": {
+    "typescript-pnp-plugin": "^0.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.17.0"
+  }
+}
